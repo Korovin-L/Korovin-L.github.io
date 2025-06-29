@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eldar Korovin – DevOps Engineer</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Raleway&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Ubuntu", sans-serif !important;
+      }
+    </style>
+    <script>
+      async function switchLang(langCode) {
+        const languageData = {
+          en: {
+            "name": "Eldar Korovin",
+            "role": "DevOps Engineer · Python · CI/CD · Kubernetes",
+            "about_title": "About Me",
+            "about_text": "DevOps engineer focused on automation, reliability and scalable infrastructure. Quick learner, team player, honest and goal-oriented. Higher education in DevOps Engineering.",
+            "services_title": "Skills",
+            "service_1": "Python, Bash",
+            "service_2": "Linux (Debian, Astra Linux)",
+            "service_3": "Container orchestration (Docker, Kubernetes)",
+            "service_4": "CI/CD pipelines (GitLab CI/CD)",
+            "service_5": "Infrastructure automation (Ansible)",
+            "service_6": "Monitoring and observability (Prometheus, Grafana)",
+            "service_7": "Experienced with Yandex.Cloud and network infrastructure",
+            "service_8": "Database management (PostgreSQL, SQLAlchemy)",
+            "service_9": "Nginx – configuration, optimization and reverse proxy",
+            "projects_title": "Projects",
+            "arctic_desc": "Telegram bot for providing service: Aiogram, Private API, YooKassa, SQLite, Docker.",
+            "wordom_desc": "A SaaS platform for businesses to launch and manage referral programs.",
+            "lesip_desc": "Developed and deployed website.",
+            "contact_title": "Contact"
+          },
+          ru: {
+            "name": "Эльдар Коровин",
+            "role": "DevOps-инженер · Python · CI/CD · Kubernetes",
+            "about_title": "Обо мне",
+            "about_text": "DevOps-инженер, специализирующийся на автоматизации, надёжности и масштабируемой инфраструктуре. Быстро обучаюсь, умею работать в команде, ответственен, честен и целеустремлён. Высшее образование по направлению DevOps.",
+            "services_title": "Навыки",
+            "service_1": "Python, Bash",
+            "service_2": "Linux (Debian, Astra Linux)",
+            "service_3": "Оркестрация контейнеров (Docker, Kubernetes)",
+            "service_4": "Настройка CI/CD пайплайнов (GitLab CI/CD)",
+            "service_5": "Автоматизация инфраструктуры (Ansible)",
+            "service_6": "Мониторинг и визуализация (Prometheus, Grafana)",
+            "service_7": "Опыт работы с Яндекс.Облако и сетевой инфраструктурой",
+            "service_8": "Работа с базами данных (PostgreSQL, SQLAlchemy)",
+            "service_9": "Nginx – настройка, оптимизация и обратное проксирование",
+            "projects_title": "Проекты",
+            "arctic_desc": "Telegram бот для предоставления услуг сервиса: Aiogram, Private API, YooKassa, SQLite, Docker.",
+            "wordom_desc": "SaaS-платформа для запуска и управления реферальными программами для бизнеса.",
+            "lesip_desc": "Разработанный и развёрнутый сайт.",
+            "contact_title": "Контакты"
+          }
+        }
+
+        const currentLangData = languageData[langCode];
+
+        for (const key in currentLangData) {
+          const el = document.querySelector(`[data-i18n='${key}']`);
+          if (el) el.innerHTML = currentLangData[key];
+        }
+
+        localStorage.setItem('preferredLanguage', langCode);
+      }
+
+      window.onload = () => {
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        switchLang(savedLang);
+      };
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <header class="text-center py-10">
+      <h1 class="text-4xl font-bold" data-i18n="name"></h1>
+      <p class="text-gray-400 mt-2" data-i18n="role"></p>
+      <div class="mt-4 space-x-2">
+        <button onclick="switchLang('en')" class="px-3 py-1 border border-gray-600 rounded">EN</button>
+        <button onclick="switchLang('ru')" class="px-3 py-1 border border-gray-600 rounded">RU</button>
+      </div>
+    </header>
+
+    <section class="max-w-3xl mx-auto px-4 py-6">
+      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="about_title"></h2>
+      <p class="text-gray-300" data-i18n="about_text">
+      </p>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-4 py-6">
+      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="services_title">Services</h2>
+      <ul class="list-disc ml-6 text-gray-300 space-y-1">
+        <li data-i18n="service_1"></li>
+        <li data-i18n="service_2"></li>
+        <li data-i18n="service_3"></li>
+        <li data-i18n="service_4"></li>
+        <li data-i18n="service_5"></li>
+        <li data-i18n="service_6"></li>
+        <li data-i18n="service_7"></li>
+        <li data-i18n="service_8"></li>
+        <li data-i18n="service_9"></li>
+      </ul>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-4 py-6">
+      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="projects_title">Projects</h2>
+      <div class="space-y-4">
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <h3 class="text-xl font-semibold">Wordom</h3>
+          <p class="text-gray-400 text-sm">Python · Flask · PostgreSQL · SQLAlchemy · Redis · Celery · Aiogram · Docker Compose · Nginx</p>
+          <p class="text-gray-300 mt-2" data-i18n="wordom_desc">
+          </p>
+          <div class="mt-2">
+            🔗 <a href="https://wordom.ru" class="text-blue-400 hover:underline" target="_blank">Wordom</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <h3 class="text-xl font-semibold">lesip.ru</h3>
+          <p class="text-gray-400 text-sm">Python · Flask · Telegram API</p>
+          <p class="text-gray-300 mt-2" data-i18n="lesip_desc">
+          </p>
+          <div class="mt-2">
+            🔗 <a href="https://lesip.ru" class="text-blue-400 hover:underline" target="_blank">lesip.ru</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-4 py-6">
+      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="contact_title">Contact</h2>
+      <ul class="text-gray-300 space-y-1">
+        <li>Email: <a href="mailto:korovineldar24@gmail.com" class="text-blue-400 hover:underline">korovineldar24@gmail.com</a></li>
+        <li>Telegram: <a href="https://t.me/korovinL" class="text-blue-400 hover:underline">@korovinL</a></li>
+        <li>GitHub: <a href="https://github.com/Korovin-L" class="text-blue-400 hover:underline">Korovin-L</a></li>
+      </ul>
+    </section>
+
+    <footer class="text-center text-gray-600 py-6 text-sm">
+      &copy; 2025 Eldar Korovin. All rights reserved.
+    </footer>
+
+  </body>
+</html>
