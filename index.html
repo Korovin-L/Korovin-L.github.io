@@ -1,149 +1,375 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-900 text-white">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eldar Korovin – DevOps Engineer</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Raleway&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: "Ubuntu", sans-serif !important;
-      }
-    </style>
-    <script>
-      async function switchLang(langCode) {
-        const languageData = {
-          en: {
-            "name": "Eldar Korovin",
-            "role": "DevOps Engineer · Python · CI/CD · Kubernetes",
-            "about_title": "About Me",
-            "about_text": "DevOps engineer focused on automation, reliability and scalable infrastructure. Quick learner, team player, honest and goal-oriented. Higher education in DevOps Engineering.",
-            "services_title": "Skills",
-            "service_1": "Python, Bash",
-            "service_2": "Linux (Debian, Astra Linux)",
-            "service_3": "Container orchestration (Docker, Kubernetes)",
-            "service_4": "CI/CD pipelines (GitLab CI/CD)",
-            "service_5": "Infrastructure automation (Ansible)",
-            "service_6": "Monitoring and observability (Prometheus, Grafana)",
-            "service_7": "Experienced with Yandex.Cloud and network infrastructure",
-            "service_8": "Database management (PostgreSQL, SQLAlchemy)",
-            "service_9": "Nginx – configuration, optimization and reverse proxy",
-            "projects_title": "Projects",
-            "arctic_desc": "Telegram bot for providing service: Aiogram, Private API, YooKassa, SQLite, Docker.",
-            "wordom_desc": "A SaaS platform for businesses to launch and manage referral programs.",
-            "lesip_desc": "Developed and deployed website.",
-            "contact_title": "Contact"
-          },
-          ru: {
-            "name": "Эльдар Коровин",
-            "role": "DevOps-инженер · Python · CI/CD · Kubernetes",
-            "about_title": "Обо мне",
-            "about_text": "DevOps-инженер, специализирующийся на автоматизации, надёжности и масштабируемой инфраструктуре. Быстро обучаюсь, умею работать в команде, ответственен, честен и целеустремлён. Высшее образование по направлению DevOps.",
-            "services_title": "Навыки",
-            "service_1": "Python, Bash",
-            "service_2": "Linux (Debian, Astra Linux)",
-            "service_3": "Оркестрация контейнеров (Docker, Kubernetes)",
-            "service_4": "Настройка CI/CD пайплайнов (GitLab CI/CD)",
-            "service_5": "Автоматизация инфраструктуры (Ansible)",
-            "service_6": "Мониторинг и визуализация (Prometheus, Grafana)",
-            "service_7": "Опыт работы с Яндекс.Облако и сетевой инфраструктурой",
-            "service_8": "Работа с базами данных (PostgreSQL, SQLAlchemy)",
-            "service_9": "Nginx – настройка, оптимизация и обратное проксирование",
-            "projects_title": "Проекты",
-            "arctic_desc": "Telegram бот для предоставления услуг сервиса: Aiogram, Private API, YooKassa, SQLite, Docker.",
-            "wordom_desc": "SaaS-платформа для запуска и управления реферальными программами для бизнеса.",
-            "lesip_desc": "Разработанный и развёрнутый сайт.",
-            "contact_title": "Контакты"
-          }
-        }
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eldar Korovin — DevOps Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        const currentLangData = languageData[langCode];
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 60px 24px;
+    }
 
-        for (const key in currentLangData) {
-          const el = document.querySelector(`[data-i18n='${key}']`);
-          if (el) el.innerHTML = currentLangData[key];
-        }
+    .page { max-width: 720px; margin: 0 auto; }
 
-        localStorage.setItem('preferredLanguage', langCode);
-      }
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-      window.onload = () => {
-        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-        switchLang(savedLang);
-      };
-    </script>
-  </head>
-  <body class="font-sans antialiased">
-    <header class="text-center py-10">
-      <h1 class="text-4xl font-bold" data-i18n="name"></h1>
-      <p class="text-gray-400 mt-2" data-i18n="role"></p>
-      <div class="mt-4 space-x-2">
-        <button onclick="switchLang('en')" class="px-3 py-1 border border-gray-600 rounded">EN</button>
-        <button onclick="switchLang('ru')" class="px-3 py-1 border border-gray-600 rounded">RU</button>
+    .nav-name { font-size: 14px; font-weight: 500; color: #1a1a1a; }
+
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+
+    .nav-links a {
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: #1a1a1a; }
+
+    .lang-switcher { display: flex; gap: 4px; }
+
+    .lang-btn {
+      padding: 2px 8px;
+      border: 1px solid #e0e0e0;
+      background: none;
+      cursor: pointer;
+      color: #aaa;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 3px;
+      transition: all 0.15s;
+    }
+
+    .lang-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+    .lang-btn:hover:not(.active) { color: #555; border-color: #aaa; }
+
+    /* HEADER */
+    header { margin-bottom: 56px; }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle { font-size: 16px; color: #555; font-weight: 400; margin-bottom: 14px; }
+
+    .meta {
+      font-size: 13px;
+      color: #999;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .meta span::before { content: '·'; color: #ddd; margin-right: 5px; }
+    .meta span:first-child::before { content: ''; margin: 0; }
+
+    .about { color: #444; font-size: 14px; max-width: 580px; }
+
+    hr { border: none; border-top: 1px solid #efefef; margin: 40px 0 32px; }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 24px;
+    }
+
+    section { margin-bottom: 48px; }
+
+    .stack-group { margin-bottom: 18px; }
+    .stack-label { font-size: 13px; font-weight: 500; color: #1a1a1a; margin-bottom: 5px; }
+    .stack-items { list-style: none; }
+
+    .stack-items li {
+      font-size: 13px; color: #555;
+      padding: 2px 0 2px 14px; position: relative;
+    }
+    .stack-items li::before { content: '–'; position: absolute; left: 0; color: #ccc; }
+
+    .exp-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; flex-wrap: wrap; gap: 4px; margin-bottom: 4px;
+    }
+    .exp-role { font-size: 15px; font-weight: 500; }
+    .exp-date { font-size: 13px; color: #999; }
+    .exp-note { font-size: 13px; color: #aaa; margin-bottom: 14px; }
+    .exp-list { list-style: none; }
+
+    .exp-list li {
+      font-size: 13px; color: #444;
+      padding: 3px 0 3px 14px; position: relative;
+    }
+    .exp-list li::before { content: '–'; position: absolute; left: 0; color: #ccc; }
+
+    .project { padding: 20px 0; border-bottom: 1px dotted #f0f0f0; }
+    .project:last-child { border-bottom: none; }
+
+    .project-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 6px;
+    }
+    .project-name { font-size: 15px; font-weight: 500; }
+
+    .project-link {
+      font-size: 12px; color: #aaa;
+      text-decoration: none; transition: color 0.15s;
+    }
+    .project-link:hover { color: #1a1a1a; }
+
+    .project-desc { font-size: 13px; color: #555; margin-bottom: 10px; }
+
+    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .tag {
+      font-size: 11px; color: #888;
+      background: #f5f5f5; padding: 2px 8px; border-radius: 3px;
+    }
+
+    .edu-name { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+    .edu-spec { font-size: 13px; color: #999; margin-bottom: 12px; }
+
+    footer {
+      border-top: 1px solid #efefef;
+      padding-top: 28px;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .contacts { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+    .contacts a {
+      font-size: 13px; color: #888;
+      text-decoration: none; transition: color 0.15s;
+    }
+    .contacts a:hover { color: #1a1a1a; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <nav>
+    <span class="nav-name">Eldar Korovin</span>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#stack"      data-en="Stack"      data-ru="Стек">Стек</a></li>
+        <li><a href="#experience" data-en="Experience" data-ru="Опыт">Опыт</a></li>
+        <li><a href="#projects"   data-en="Projects"   data-ru="Проекты">Проекты</a></li>
+        <li><a href="#contact"    data-en="Contact"    data-ru="Контакты">Контакты</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn active" id="btn-ru" onclick="setLang('ru')">RU</button>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <section class="max-w-3xl mx-auto px-4 py-6">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="about_title"></h2>
-      <p class="text-gray-300" data-i18n="about_text">
+  <header>
+    <h1>Eldar Korovin</h1>
+    <div class="subtitle">DevOps Engineer</div>
+    <div class="meta">
+      <span data-en="Open to remote &amp; relocation" data-ru="Удалёнка · готов к переезду">Удалёнка · готов к переезду</span>
+      <span data-en="English — Intermediate" data-ru="Английский — Intermediate">Английский — Intermediate</span>
+    </div>
+    <p class="about"
+       data-en="DevOps engineer with 1+ year of commercial experience. Built and maintain full CI/CD infrastructure from scratch — GitLab migration, pipeline setup, logging, monitoring, and artifact storage. Sole DevOps in the team. Also shipped a commercial SaaS product independently."
+       data-ru="DevOps-инженер с коммерческим опытом 1+ год. Выстроил полный цикл CI/CD инфраструктуры компании: миграция GitLab, перевод пайплайнов, настройка логирования, мониторинга и хранения артефактов. Единственный выделенный DevOps в команде. Также самостоятельно запустил коммерческий SaaS-продукт.">
+      DevOps-инженер с коммерческим опытом 1+ год. Выстроил полный цикл CI/CD инфраструктуры компании: миграция GitLab, перевод пайплайнов, настройка логирования, мониторинга и хранения артефактов. Единственный выделенный DevOps в команде. Также самостоятельно запустил коммерческий SaaS-продукт.
+    </p>
+  </header>
+
+  <hr />
+
+  <section id="stack">
+    <h2 data-en="Stack" data-ru="Технический стек">Технический стек</h2>
+
+    <div class="stack-group">
+      <div class="stack-label">CI/CD & VCS</div>
+      <ul class="stack-items">
+        <li data-en="GitLab CI/CD — pipelines, runners, environments"         data-ru="GitLab CI/CD — настройка пайплайнов, runners, environments">GitLab CI/CD — настройка пайплайнов, runners, environments</li>
+        <li data-en="Migrated TeamCity + Octopus Deploy → GitLab CI"           data-ru="Миграция TeamCity + Octopus Deploy → GitLab CI">Миграция TeamCity + Octopus Deploy → GitLab CI</li>
+        <li data-en="GitLab 12 → 17 upgrade, bare metal → Docker migration"    data-ru="Обновление GitLab 12 → 17, перенос с bare metal в Docker">Обновление GitLab 12 → 17, перенос с bare metal в Docker</li>
+      </ul>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-label" data-en="Containerization" data-ru="Контейнеризация">Контейнеризация</div>
+      <ul class="stack-items">
+        <li data-en="Docker, Docker Compose — production environments (dev/test/prod)" data-ru="Docker, Docker Compose — production окружения (dev/test/prod)">Docker, Docker Compose — production окружения (dev/test/prod)</li>
+        <li data-en="Kubernetes (k8s, k3s, minikube) — deployment and configuration"   data-ru="Kubernetes (k8s, k3s, minikube) — развёртывание и настройка">Kubernetes (k8s, k3s, minikube) — развёртывание и настройка</li>
+      </ul>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-label" data-en="Infrastructure" data-ru="Инфраструктура">Инфраструктура</div>
+      <ul class="stack-items">
+        <li data-en="Nginx — reverse proxy, routing, SSL"                                        data-ru="Nginx — reverse proxy, routing, SSL">Nginx — reverse proxy, routing, SSL</li>
+        <li data-en="Ansible — automation, playbooks"                                            data-ru="Ansible — автоматизация задач, playbooks">Ansible — автоматизация задач, playbooks</li>
+        <li data-en="Nexus Repository — artifacts (.NET, npm, apt, PyPI, Docker)"               data-ru="Nexus Repository — хранение артефактов (.NET, npm, apt, PyPI, Docker)">Nexus Repository — хранение артефактов (.NET, npm, apt, PyPI, Docker)</li>
+        <li data-en="MinIO, SeaweedFS — object storage"                                          data-ru="MinIO, SeaweedFS — объектное хранилище">MinIO, SeaweedFS — объектное хранилище</li>
+        <li data-en="Redis, Valkey — caching"                                                    data-ru="Redis, Valkey — кэширование">Redis, Valkey — кэширование</li>
+      </ul>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-label" data-en="Monitoring & Logging" data-ru="Мониторинг & логирование">Мониторинг & логирование</div>
+      <ul class="stack-items">
+        <li data-en="ELK Stack (Elasticsearch, Logstash, Kibana)" data-ru="ELK Stack (Elasticsearch, Logstash, Kibana)">ELK Stack (Elasticsearch, Logstash, Kibana)</li>
+        <li data-en="OpenSearch — setup and operations"            data-ru="OpenSearch — настройка и эксплуатация">OpenSearch — настройка и эксплуатация</li>
+      </ul>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-label" data-en="Security & Access" data-ru="Безопасность & доступ">Безопасность & доступ</div>
+      <ul class="stack-items">
+        <li data-en="Keycloak — SSO integration across corporate services" data-ru="Keycloak — интеграция SSO для корпоративных сервисов">Keycloak — интеграция SSO для корпоративных сервисов</li>
+        <li data-en="GitLab CI/CD variables + .env — secrets management"  data-ru="GitLab CI/CD variables + .env — управление секретами">GitLab CI/CD variables + .env — управление секретами</li>
+      </ul>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-label" data-en="Cloud & OS" data-ru="Облака & ОС">Облака & ОС</div>
+      <ul class="stack-items">
+        <li data-en="Yandex Cloud — basic experience"              data-ru="Yandex Cloud — базовый опыт">Yandex Cloud — базовый опыт</li>
+        <li data-en="Linux (Ubuntu / Debian / Astra)"              data-ru="Linux (Ubuntu / Debian / Astra)">Linux (Ubuntu / Debian / Astra)</li>
+        <li data-en="Bash, Python — scripting and automation"      data-ru="Bash, Python — написание скриптов автоматизации">Bash, Python — написание скриптов автоматизации</li>
+        <li data-en=".NET, Vue.js, Python — build and deploy"      data-ru=".NET, Vue.js, Python — сборка и деплой">.NET, Vue.js, Python — сборка и деплой</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr />
+
+  <section id="experience">
+    <h2 data-en="Experience" data-ru="Опыт работы">Опыт работы</h2>
+    <div class="exp-header">
+      <span class="exp-role">DevOps Engineer</span>
+      <span class="exp-date" data-en="2025 — present" data-ru="2025 — настоящее время">2025 — настоящее время</span>
+    </div>
+    <div class="exp-note"
+         data-en="Sole DevOps · 10+ servers · dev / test / prod"
+         data-ru="Единственный выделенный DevOps · 10+ серверов · dev / test / prod">
+      Единственный выделенный DevOps · 10+ серверов · dev / test / prod
+    </div>
+    <ul class="exp-list">
+      <li data-en="Full GitLab migration 12 → 17 + bare metal to Docker — zero data loss, zero downtime"              data-ru="Полная миграция GitLab 12 → 17 + перенос с bare metal в Docker — без потери данных и простоев">Полная миграция GitLab 12 → 17 + перенос с bare metal в Docker — без потери данных и простоев</li>
+      <li data-en="Migrated CI/CD from TeamCity + Octopus Deploy to GitLab CI/CD"                                     data-ru="Перевёл CI/CD с TeamCity + Octopus Deploy на GitLab CI/CD, унифицировал сборку и деплой">Перевёл CI/CD с TeamCity + Octopus Deploy на GitLab CI/CD, унифицировал сборку и деплой</li>
+      <li data-en="Set up ELK/OpenSearch logging stack for centralised log collection across all services"             data-ru="Поднял стек логирования ELK/OpenSearch для централизованного сбора логов со всех сервисов">Поднял стек логирования ELK/OpenSearch для централизованного сбора логов со всех сервисов</li>
+      <li data-en="Integrated SSO via Keycloak for GitLab, Nexus, OpenSearch and other corporate tools"               data-ru="Интегрировал SSO через Keycloak для GitLab, Nexus, OpenSearch и других корпоративных инструментов">Интегрировал SSO через Keycloak для GitLab, Nexus, OpenSearch и других корпоративных инструментов</li>
+      <li data-en="Configured Nexus Repository as unified artifact storage (.NET, npm, apt, PyPI, Docker)"            data-ru="Настроил Nexus Repository как единое хранилище артефактов (.NET, npm, apt, PyPI, Docker)">Настроил Nexus Repository как единое хранилище артефактов (.NET, npm, apt, PyPI, Docker)</li>
+      <li data-en="Set up object storage on MinIO and SeaweedFS"                                                      data-ru="Организовал объектное хранилище на MinIO и SeaweedFS">Организовал объектное хранилище на MinIO и SeaweedFS</li>
+      <li data-en="Maintain production infrastructure: 10+ servers, dozens of Docker services, three environments"   data-ru="Поддерживаю production-инфраструктуру: 10+ серверов, десятки Docker-сервисов, три окружения">Поддерживаю production-инфраструктуру: 10+ серверов, десятки Docker-сервисов, три окружения</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section id="projects">
+    <h2 data-en="Projects" data-ru="Проекты">Проекты</h2>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Wordom</span>
+        <a href="https://wordom.ru" target="_blank" class="project-link">wordom.ru ↗</a>
+      </div>
+      <p class="project-desc"
+         data-en="SaaS platform for referral programs with Telegram bots, analytics dashboard, and subscription billing. Built and shipped independently — backend, infrastructure, and production deployment."
+         data-ru="SaaS-платформа для реферальных программ с Telegram-ботами, аналитикой и подпиской. Разработан и запущен самостоятельно — от бэкенда до инфраструктуры и деплоя в продакшн.">
+        SaaS-платформа для реферальных программ с Telegram-ботами, аналитикой и подпиской. Разработан и запущен самостоятельно — от бэкенда до инфраструктуры и деплоя в продакшн.
       </p>
-    </section>
-
-    <section class="max-w-3xl mx-auto px-4 py-6">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="services_title">Services</h2>
-      <ul class="list-disc ml-6 text-gray-300 space-y-1">
-        <li data-i18n="service_1"></li>
-        <li data-i18n="service_2"></li>
-        <li data-i18n="service_3"></li>
-        <li data-i18n="service_4"></li>
-        <li data-i18n="service_5"></li>
-        <li data-i18n="service_6"></li>
-        <li data-i18n="service_7"></li>
-        <li data-i18n="service_8"></li>
-        <li data-i18n="service_9"></li>
-      </ul>
-    </section>
-
-    <section class="max-w-3xl mx-auto px-4 py-6">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="projects_title">Projects</h2>
-      <div class="space-y-4">
-        <div class="bg-gray-800 p-4 rounded-lg">
-          <h3 class="text-xl font-semibold">Wordom</h3>
-          <p class="text-gray-400 text-sm">Python · Flask · PostgreSQL · SQLAlchemy · Redis · Celery · Aiogram · Docker Compose · Nginx</p>
-          <p class="text-gray-300 mt-2" data-i18n="wordom_desc">
-          </p>
-          <div class="mt-2">
-            🔗 <a href="https://wordom.ru" class="text-blue-400 hover:underline" target="_blank">Wordom</a>
-          </div>
-        </div>
-        <div class="bg-gray-800 p-4 rounded-lg">
-          <h3 class="text-xl font-semibold">lesip.ru</h3>
-          <p class="text-gray-400 text-sm">Python · Flask · Telegram API</p>
-          <p class="text-gray-300 mt-2" data-i18n="lesip_desc">
-          </p>
-          <div class="mt-2">
-            🔗 <a href="https://lesip.ru" class="text-blue-400 hover:underline" target="_blank">lesip.ru</a>
-          </div>
-        </div>
+      <div class="project-tags">
+        <span class="tag">Python</span><span class="tag">Flask</span>
+        <span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+        <span class="tag">Celery</span><span class="tag">Aiogram</span>
+        <span class="tag">Docker Compose</span><span class="tag">Nginx</span>
       </div>
-    </section>
+    </div>
 
-    <section class="max-w-3xl mx-auto px-4 py-6">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2" data-i18n="contact_title">Contact</h2>
-      <ul class="text-gray-300 space-y-1">
-        <li>Email: <a href="mailto:korovineldar24@gmail.com" class="text-blue-400 hover:underline">korovineldar24@gmail.com</a></li>
-        <li>Telegram: <a href="https://t.me/korovinL" class="text-blue-400 hover:underline">@korovinL</a></li>
-        <li>GitHub: <a href="https://github.com/Korovin-L" class="text-blue-400 hover:underline">Korovin-L</a></li>
-      </ul>
-    </section>
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">lesip.ru</span>
+        <a href="https://lesip.ru" target="_blank" class="project-link">lesip.ru ↗</a>
+      </div>
+      <p class="project-desc"
+         data-en="Website with Telegram API integration. Built with Python and Flask."
+         data-ru="Веб-сайт с интеграцией Telegram API. Написан на Python и Flask.">
+        Веб-сайт с интеграцией Telegram API. Написан на Python и Flask.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Telegram API</span>
+      </div>
+    </div>
+  </section>
 
-    <footer class="text-center text-gray-600 py-6 text-sm">
-      &copy; 2025 Eldar Korovin. All rights reserved.
-    </footer>
+  <hr />
 
-  </body>
+  <section>
+    <h2 data-en="Education" data-ru="Образование">Образование</h2>
+    <div class="edu-name"
+         data-en="Northern (Arctic) Federal University — NArFU"
+         data-ru="Северный (Арктический) федеральный университет им. М.В. Ломоносова">
+      Северный (Арктический) федеральный университет им. М.В. Ломоносова
+    </div>
+    <div class="edu-spec"
+         data-en="Computer Science · DevOps Engineer · 2021–2025"
+         data-ru="Информатика и вычислительная техника · DevOps-инженер · 2021–2025">
+      Информатика и вычислительная техника · DevOps-инженер · 2021–2025
+    </div>
+    <ul class="stack-items">
+      <li data-en="Linux administration, server and service configuration"       data-ru="Linux-администрирование, конфигурирование серверов и сервисов">Linux-администрирование, конфигурирование серверов и сервисов</li>
+      <li data-en="Cloud technologies — hands-on experience with Yandex Cloud"  data-ru="Облачные технологии — практический опыт с Yandex Cloud">Облачные технологии — практический опыт с Yandex Cloud</li>
+      <li data-en="Networking — TCP/IP, DNS, routing fundamentals"               data-ru="Сетевые технологии — основы TCP/IP, DNS, маршрутизации">Сетевые технологии — основы TCP/IP, DNS, маршрутизации</li>
+      <li data-en="Containerization and orchestration: Docker, Kubernetes, Ansible" data-ru="Контейнеризация и оркестрация: Docker, Kubernetes, Ansible">Контейнеризация и оркестрация: Docker, Kubernetes, Ansible</li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <div class="contacts">
+      <a href="mailto:korovineldar24@gmail.com">korovineldar24@gmail.com</a>
+      <a href="https://t.me/korovinL" target="_blank">Telegram</a>
+      <a href="https://github.com/Korovin-L" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+    document.querySelectorAll('[data-en][data-ru]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    document.documentElement.lang = lang;
+  }
+</script>
+</body>
 </html>
