@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eldar Korovin — DevOps Engineer</title>
+  <title>Коровин Эльдар — DevOps-инженер</title>
+  <meta name="description" content="DevOps-инженер. GitLab CI/CD, Docker, Ansible, Linux, Keycloak SSO, Grafana/ELK. Коммерческий опыт с 2025 года. Открыт к предложениям." />
+  <link rel="canonical" href="https://korovin-l.github.io/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Коровин Эльдар — DevOps-инженер" />
+  <meta property="og:description" content="GitLab CI/CD, Docker, Ansible, Linux, Keycloak SSO, Grafana/ELK. Открыт к предложениям." />
+  <meta property="og:url" content="https://korovin-l.github.io/" />
+  <link rel="icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -126,30 +133,6 @@
     }
     .exp-list li::before { content: '–'; position: absolute; left: 0; color: #ccc; }
 
-    .project { padding: 20px 0; border-bottom: 1px dotted #f0f0f0; }
-    .project:last-child { border-bottom: none; }
-
-    .project-header {
-      display: flex; justify-content: space-between;
-      align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 6px;
-    }
-    .project-name { font-size: 15px; font-weight: 500; }
-
-    .project-link {
-      font-size: 12px; color: #aaa;
-      text-decoration: none; transition: color 0.15s;
-    }
-    .project-link:hover { color: #1a1a1a; }
-
-    .project-desc { font-size: 13px; color: #555; margin-bottom: 10px; }
-
-    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-    .tag {
-      font-size: 11px; color: #888;
-      background: #f5f5f5; padding: 2px 8px; border-radius: 3px;
-    }
-
     .edu-name { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
     .edu-spec { font-size: 13px; color: #999; margin-bottom: 12px; }
 
@@ -169,18 +152,44 @@
       text-decoration: none; transition: color 0.15s;
     }
     .contacts a:hover { color: #1a1a1a; }
+
+    /* OPEN TO WORK */
+    .badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12px; font-weight: 500; color: #555;
+      background: #f5f5f5; border: 1px solid #ececec;
+      padding: 3px 10px; border-radius: 3px; margin-bottom: 14px;
+    }
+    .badge::before {
+      content: ''; width: 5px; height: 5px;
+      border-radius: 50%; background: #1a1a1a;
+    }
+
+    .exp-company { font-size: 13px; color: #777; margin-bottom: 2px; }
+
+    /* PRINT / SAVE AS PDF */
+    @media print {
+      body { padding: 0; font-size: 11.5px; line-height: 1.5; }
+      nav, .lang-switcher { display: none; }
+      .page { max-width: none; }
+      a { color: #1a1a1a; text-decoration: none; }
+        section { page-break-inside: avoid; }
+      hr { margin: 20px 0 16px; }
+      header { margin-bottom: 28px; }
+      section { margin-bottom: 26px; }
+    }
   </style>
 </head>
 <body>
 <div class="page">
 
   <nav>
-    <span class="nav-name">Eldar Korovin</span>
+    <span class="nav-name" data-en="Eldar Korovin" data-ru="Коровин Эльдар">Коровин Эльдар</span>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#stack"      data-en="Stack"      data-ru="Стек">Стек</a></li>
         <li><a href="#experience" data-en="Experience" data-ru="Опыт">Опыт</a></li>
-        <li><a href="#projects"   data-en="Projects"   data-ru="Проекты">Проекты</a></li>
+        <li><a href="#education"  data-en="Education"  data-ru="Образование">Образование</a></li>
         <li><a href="#contact"    data-en="Contact"    data-ru="Контакты">Контакты</a></li>
       </ul>
       <div class="lang-switcher">
@@ -191,16 +200,18 @@
   </nav>
 
   <header>
-    <h1>Eldar Korovin</h1>
-    <div class="subtitle">DevOps Engineer</div>
+    <div class="badge" data-en="Open to offers" data-ru="Открыт к предложениям">Открыт к предложениям</div>
+    <h1 data-en="Eldar Korovin" data-ru="Коровин Эльдар">Коровин Эльдар</h1>
+    <div class="subtitle" data-en="DevOps Engineer" data-ru="DevOps-инженер">DevOps-инженер</div>
     <div class="meta">
-      <span data-en="Open to remote &amp; relocation" data-ru="Удалёнка · готов к переезду">Удалёнка · готов к переезду</span>
-      <span data-en="English — Intermediate" data-ru="Английский — Intermediate">Английский — Intermediate</span>
+      <span data-en="Arkhangelsk · open to relocation (Moscow / St. Petersburg)" data-ru="Архангельск · готов к переезду (Москва / СПб)">Архангельск · готов к переезду (Москва / СПб)</span>
+      <span data-en="Remote · hybrid · on-site" data-ru="Удалёнка · гибрид · офис">Удалёнка · гибрид · офис</span>
+      <span data-en="English — B1" data-ru="Английский — B1">Английский — B1</span>
     </div>
     <p class="about"
-       data-en="DevOps engineer with 1+ year of commercial experience. Built and maintain full CI/CD infrastructure from scratch — GitLab migration, pipeline setup, logging, monitoring, and artifact storage. Broad DevOps scope in the team. Also shipped a commercial SaaS product independently."
-       data-ru="DevOps-инженер с коммерческим опытом 1+ год. Выстроил полный цикл CI/CD инфраструктуры компании: миграция GitLab, перевод пайплайнов, настройка логирования, мониторинга и хранения артефактов. Выполнял основной объём DevOps-задач в команде. Также самостоятельно запустил коммерческий SaaS-продукт.">
-      DevOps-инженер с коммерческим опытом 1+ год. Выстроил полный цикл CI/CD инфраструктуры компании: миграция GitLab, перевод пайплайнов, настройка логирования, мониторинга и хранения артефактов. Выполнял основной объём DevOps-задач в команде. Также самостоятельно запустил коммерческий SaaS-продукт.
+       data-en="DevOps engineer, commercial experience since July 2025. Built and maintain the company’s full CI/CD infrastructure: GitLab 12→17 migration from bare metal to Docker, moved pipelines off TeamCity + Octopus Deploy to GitLab CI, centralised logging and monitoring, SSO via Keycloak, unified artifact storage in Nexus. I close the bulk of the team’s DevOps work end to end — from servers and networking to alerting."
+       data-ru="DevOps-инженер, коммерческий опыт с июля 2025. Выстроил полный цикл CI/CD-инфраструктуры компании: миграция GitLab 12→17 с bare metal в Docker, перевод пайплайнов с TeamCity + Octopus Deploy на GitLab CI, централизованное логирование и мониторинг, SSO через Keycloak, единое хранилище артефактов в Nexus. Основной объём DevOps-задач в команде закрываю самостоятельно — от железа и сетей до алертинга.">
+      DevOps-инженер, коммерческий опыт с июля 2025. Выстроил полный цикл CI/CD-инфраструктуры компании: миграция GitLab 12→17 с bare metal в Docker, перевод пайплайнов с TeamCity + Octopus Deploy на GitLab CI, централизованное логирование и мониторинг, SSO через Keycloak, единое хранилище артефактов в Nexus. Основной объём DevOps-задач в команде закрываю самостоятельно — от железа и сетей до алертинга.
     </p>
   </header>
 
@@ -210,58 +221,59 @@
     <h2 data-en="Stack" data-ru="Технический стек">Технический стек</h2>
 
     <div class="stack-group">
-      <div class="stack-label">CI/CD & VCS</div>
+      <div class="stack-label">CI/CD &amp; VCS</div>
       <ul class="stack-items">
-        <li data-en="GitLab CI/CD — pipelines, runners, environments"         data-ru="GitLab CI/CD — настройка пайплайнов, runners, environments">GitLab CI/CD — настройка пайплайнов, runners, environments</li>
-        <li data-en="Migrated TeamCity + Octopus Deploy → GitLab CI"           data-ru="Миграция TeamCity + Octopus Deploy → GitLab CI">Миграция TeamCity + Octopus Deploy → GitLab CI</li>
-        <li data-en="GitLab 12 → 17 upgrade, bare metal → Docker migration"    data-ru="Обновление GitLab 12 → 17, перенос с bare metal в Docker">Обновление GitLab 12 → 17, перенос с bare metal в Docker</li>
+        <li data-en="GitLab CI/CD — build and deploy pipelines: setup, runners, environments" data-ru="GitLab CI/CD — пайплайны сборки и деплоя: настройка, runners, environments">GitLab CI/CD — пайплайны сборки и деплоя: настройка, runners, environments</li>
+        <li data-en="GitLab — self-hosted VCS: 12 → 17 upgrade, bare metal → Docker migration" data-ru="GitLab — self-hosted система контроля версий: обновление 12 → 17, перенос с bare metal в Docker">GitLab — self-hosted система контроля версий: обновление 12 → 17, перенос с bare metal в Docker</li>
+        <li data-en="TeamCity, Octopus Deploy — legacy CI/CD: moved build and deploy to GitLab CI" data-ru="TeamCity, Octopus Deploy — legacy CI/CD: перевёл сборку и деплой на GitLab CI">TeamCity, Octopus Deploy — legacy CI/CD: перевёл сборку и деплой на GitLab CI</li>
+        <li data-en=".NET, Vue.js, Python — product stack: unified build and deploy in GitLab CI" data-ru=".NET, Vue.js, Python — стек продукта: унифицировал сборку и деплой в GitLab CI">.NET, Vue.js, Python — стек продукта: унифицировал сборку и деплой в GitLab CI</li>
       </ul>
     </div>
 
     <div class="stack-group">
       <div class="stack-label" data-en="Containerization" data-ru="Контейнеризация">Контейнеризация</div>
       <ul class="stack-items">
-        <li data-en="Docker, Docker Compose — production environments (dev/test/prod)" data-ru="Docker, Docker Compose — production окружения (dev/test/prod)">Docker, Docker Compose — production окружения (dev/test/prod)</li>
-        <li data-en="Kubernetes (k8s, k3s, minikube) — deployment and configuration (pet projects only)"   data-ru="Kubernetes (k8s, k3s, minikube) — развёртывание и настройка (пет-проекты)">Kubernetes (k8s, k3s, minikube) — развёртывание и настройка (пет-проекты)</li>
+        <li data-en="Docker, Docker Compose — service containerization: production environments (dev/test/prod)" data-ru="Docker, Docker Compose — контейнеризация сервисов: production-окружения (dev/test/prod)">Docker, Docker Compose — контейнеризация сервисов: production-окружения (dev/test/prod)</li>
+        <li data-en="Kubernetes (k8s, k3s, minikube) — container orchestration: deployment and configuration (pet projects)" data-ru="Kubernetes (k8s, k3s, minikube) — оркестрация контейнеров: развёртывание и настройка (пет-проекты)">Kubernetes (k8s, k3s, minikube) — оркестрация контейнеров: развёртывание и настройка (пет-проекты)</li>
       </ul>
     </div>
 
     <div class="stack-group">
       <div class="stack-label" data-en="Infrastructure" data-ru="Инфраструктура">Инфраструктура</div>
       <ul class="stack-items">
-        <li data-en="Nginx — reverse proxy, routing, SSL"                                        data-ru="Nginx — reverse proxy, routing, SSL">Nginx — reverse proxy, routing, SSL</li>
-        <li data-en="Ansible — automation, playbooks"                                            data-ru="Ansible — автоматизация задач, playbooks">Ansible — автоматизация задач, playbooks</li>
-        <li data-en="Nexus Repository — artifacts (.NET, npm, apt, PyPI, Docker)"               data-ru="Nexus Repository — хранение артефактов (.NET, npm, apt, PyPI, Docker)">Nexus Repository — хранение артефактов (.NET, npm, apt, PyPI, Docker)</li>
-        <li data-en="MinIO, SeaweedFS — object storage"                                          data-ru="MinIO, SeaweedFS — объектное хранилище">MinIO, SeaweedFS — объектное хранилище</li>
-        <li data-en="Redis, Valkey — caching"                                                    data-ru="Redis, Valkey — кэширование">Redis, Valkey — кэширование</li>
-        <li data-en="RabbitMQ — deployment and maintenance"                                      data-ru="RabbitMQ — развёртывание и поддержка">RabbitMQ — развёртывание и поддержка</li>
+        <li data-en="Nginx — reverse proxy: routing, SSL termination" data-ru="Nginx — reverse proxy: маршрутизация, терминация SSL">Nginx — reverse proxy: маршрутизация, терминация SSL</li>
+        <li data-en="Ansible — configuration management: playbooks, roles, routine automation" data-ru="Ansible — управление конфигурацией: playbooks, роли, автоматизация рутины">Ansible — управление конфигурацией: playbooks, роли, автоматизация рутины</li>
+        <li data-en="Nexus Repository — artifact storage: set up as the single registry for .NET, npm, apt, PyPI, Docker" data-ru="Nexus Repository — хранилище артефактов: настроил единое для .NET, npm, apt, PyPI, Docker">Nexus Repository — хранилище артефактов: настроил единое для .NET, npm, apt, PyPI, Docker</li>
+        <li data-en="MinIO, SeaweedFS — S3 object storage: deployment and maintenance" data-ru="MinIO, SeaweedFS — объектное хранилище S3: развёртывание и поддержка">MinIO, SeaweedFS — объектное хранилище S3: развёртывание и поддержка</li>
+        <li data-en="PostgreSQL — relational database: administration, backup and restore" data-ru="PostgreSQL — реляционная СУБД: администрирование, бэкапы и восстановление">PostgreSQL — реляционная СУБД: администрирование, бэкапы и восстановление</li>
+        <li data-en="Redis, Valkey — in-memory cache: deployment and maintenance" data-ru="Redis, Valkey — in-memory кэш: развёртывание и поддержка">Redis, Valkey — in-memory кэш: развёртывание и поддержка</li>
+        <li data-en="RabbitMQ — message broker: deployment and maintenance" data-ru="RabbitMQ — брокер сообщений: развёртывание и поддержка">RabbitMQ — брокер сообщений: развёртывание и поддержка</li>
       </ul>
     </div>
 
     <div class="stack-group">
-      <div class="stack-label" data-en="Monitoring & Logging" data-ru="Мониторинг & логирование">Мониторинг & логирование</div>
+      <div class="stack-label" data-en="Monitoring &amp; Logging" data-ru="Мониторинг &amp; логирование">Мониторинг &amp; логирование</div>
       <ul class="stack-items">
-        <li data-en="ELK Stack (Elasticsearch, Logstash, Kibana)" data-ru="ELK Stack (Elasticsearch, Logstash, Kibana)">ELK Stack (Elasticsearch, Logstash, Kibana)</li>
-        <li data-en="OpenSearch — setup and operations"            data-ru="OpenSearch — настройка и эксплуатация">OpenSearch — настройка и эксплуатация</li>
-        <li data-en="Grafana Stack (Grafana, Prometheus, Loki, Tempo, Alertmanager, Alloy)" data-ru="Grafana Stack (Grafana, Prometheus, Loki, Tempo, Alertmanager, Alloy)">Grafana Stack (Grafana, Prometheus, Loki, Tempo, Alertmanager, Alloy)</li>
+        <li data-en="ELK Stack (Elasticsearch, Logstash, Kibana) — centralised logging: collection across all services" data-ru="ELK Stack (Elasticsearch, Logstash, Kibana) — централизованное логирование: сбор логов со всех сервисов">ELK Stack (Elasticsearch, Logstash, Kibana) — централизованное логирование: сбор логов со всех сервисов</li>
+        <li data-en="OpenSearch — log search and storage: setup and operations" data-ru="OpenSearch — поиск и хранение логов: настройка и эксплуатация">OpenSearch — поиск и хранение логов: настройка и эксплуатация</li>
+        <li data-en="Grafana Stack (Prometheus, Loki, Tempo, Alertmanager, Alloy) — metrics, logs and alerting: dashboards and alerts" data-ru="Grafana Stack (Prometheus, Loki, Tempo, Alertmanager, Alloy) — метрики, логи и алертинг: дашборды и алерты">Grafana Stack (Prometheus, Loki, Tempo, Alertmanager, Alloy) — метрики, логи и алертинг: дашборды и алерты</li>
       </ul>
     </div>
 
     <div class="stack-group">
-      <div class="stack-label" data-en="Security & Access" data-ru="Безопасность & доступ">Безопасность & доступ</div>
+      <div class="stack-label" data-en="Security &amp; Access" data-ru="Безопасность &amp; доступ">Безопасность &amp; доступ</div>
       <ul class="stack-items">
-        <li data-en="Keycloak — SSO integration across corporate services" data-ru="Keycloak — интеграция SSO для корпоративных сервисов">Keycloak — интеграция SSO для корпоративных сервисов</li>
-        <li data-en="GitLab CI/CD variables + .env — secrets management"  data-ru="GitLab CI/CD variables + .env — управление секретами">GitLab CI/CD variables + .env — управление секретами</li>
+        <li data-en="Keycloak — SSO and access management: integrated with GitLab, Nexus, OpenSearch" data-ru="Keycloak — SSO и управление доступом: интеграция с GitLab, Nexus, OpenSearch">Keycloak — SSO и управление доступом: интеграция с GitLab, Nexus, OpenSearch</li>
+        <li data-en="GitLab CI/CD variables, .env — secrets storage: managing access to variables" data-ru="GitLab CI/CD variables, .env — хранение секретов: управление доступом к переменным">GitLab CI/CD variables, .env — хранение секретов: управление доступом к переменным</li>
       </ul>
     </div>
 
     <div class="stack-group">
-      <div class="stack-label" data-en="Cloud & OS" data-ru="Облака & ОС">Облака & ОС</div>
+      <div class="stack-label" data-en="Cloud &amp; OS" data-ru="Облака &amp; ОС">Облака &amp; ОС</div>
       <ul class="stack-items">
-        <li data-en="Yandex Cloud — basic experience"              data-ru="Yandex Cloud — базовый опыт">Yandex Cloud — базовый опыт</li>
-        <li data-en="Linux (Ubuntu / Debian / Astra)"              data-ru="Linux (Ubuntu / Debian / Astra)">Linux (Ubuntu / Debian / Astra)</li>
-        <li data-en="Bash, Python — scripting and automation"      data-ru="Bash, Python — написание скриптов автоматизации">Bash, Python — написание скриптов автоматизации</li>
-        <li data-en=".NET, Vue.js, Python — build and deploy"      data-ru=".NET, Vue.js, Python — сборка и деплой">.NET, Vue.js, Python — сборка и деплой</li>
+        <li data-en="Linux (Astra, Debian, Ubuntu) — server OS: administration, service configuration" data-ru="Linux (Astra, Debian, Ubuntu) — серверная ОС: администрирование, настройка сервисов">Linux (Astra, Debian, Ubuntu) — серверная ОС: администрирование, настройка сервисов</li>
+        <li data-en="Yandex Cloud — cloud infrastructure: basic experience" data-ru="Yandex Cloud — облачная инфраструктура: базовый опыт">Yandex Cloud — облачная инфраструктура: базовый опыт</li>
+        <li data-en="Bash, Python — scripting: routine task automation" data-ru="Bash, Python — скриптовые языки: автоматизация рутинных задач">Bash, Python — скриптовые языки: автоматизация рутинных задач</li>
       </ul>
     </div>
   </section>
@@ -271,9 +283,10 @@
   <section id="experience">
     <h2 data-en="Experience" data-ru="Опыт работы">Опыт работы</h2>
     <div class="exp-header">
-      <span class="exp-role">DevOps Engineer</span>
-      <span class="exp-date" data-en="2025 — present" data-ru="2025 — настоящее время">2025 — настоящее время</span>
+      <span class="exp-role" data-en="DevOps Engineer / Software Engineer" data-ru="Инженер-программист (DevOps-инженер)">Инженер-программист (DevOps-инженер)</span>
+      <span class="exp-date" data-en="Jul 2025 — present" data-ru="Июль 2025 — настоящее время">Июль 2025 — настоящее время</span>
     </div>
+    <div class="exp-company" data-en="Company · Arkhangelsk" data-ru="Предприятие · Архангельск">Предприятие · Архангельск</div>
     <div class="exp-note"
          data-en="Broad DevOps scope · 10+ servers · dev / test / prod"
          data-ru="Основной объём DevOps-задач · 10+ серверов · dev / test / prod">
@@ -286,54 +299,14 @@
       <li data-en="Integrated SSO via Keycloak for GitLab, Nexus, OpenSearch and other corporate tools"               data-ru="Интегрировал SSO через Keycloak для GitLab, Nexus, OpenSearch и других корпоративных инструментов">Интегрировал SSO через Keycloak для GitLab, Nexus, OpenSearch и других корпоративных инструментов</li>
       <li data-en="Configured Nexus Repository as unified artifact storage (.NET, npm, apt, PyPI, Docker)"            data-ru="Настроил Nexus Repository как единое хранилище артефактов (.NET, npm, apt, PyPI, Docker)">Настроил Nexus Repository как единое хранилище артефактов (.NET, npm, apt, PyPI, Docker)</li>
       <li data-en="Set up object storage on MinIO and SeaweedFS"                                                      data-ru="Организовал объектное хранилище на MinIO и SeaweedFS">Организовал объектное хранилище на MinIO и SeaweedFS</li>
+      <li data-en="Administer Astra Linux / Debian servers; onboard the team on DevOps practices and tooling" data-ru="Администрирую серверы на Astra Linux / Debian, обучаю команду DevOps-практикам и инструментам">Администрирую серверы на Astra Linux / Debian, обучаю команду DevOps-практикам и инструментам</li>
       <li data-en="Maintain production infrastructure: 10+ servers, dozens of Docker services, three environments"   data-ru="Поддерживаю production-инфраструктуру: 10+ серверов, десятки Docker-сервисов, три окружения">Поддерживаю production-инфраструктуру: 10+ серверов, десятки Docker-сервисов, три окружения</li>
     </ul>
   </section>
 
   <hr />
 
-  <!-- <section id="projects">
-    <h2 data-en="Projects" data-ru="Проекты">Проекты</h2>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">Wordom</span>
-        <a href="https://wordom.ru" target="_blank" class="project-link">wordom.ru ↗</a>
-      </div>
-      <p class="project-desc"
-         data-en="SaaS platform for referral programs with Telegram bots, analytics dashboard, and subscription billing. Built and shipped independently — backend, infrastructure, and production deployment."
-         data-ru="SaaS-платформа для реферальных программ с Telegram-ботами, аналитикой и подпиской. Разработан и запущен самостоятельно — от бэкенда до инфраструктуры и деплоя в продакшн.">
-        SaaS-платформа для реферальных программ с Telegram-ботами, аналитикой и подпиской. Разработан и запущен самостоятельно — от бэкенда до инфраструктуры и деплоя в продакшн.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Python</span><span class="tag">Flask</span>
-        <span class="tag">PostgreSQL</span><span class="tag">Redis</span>
-        <span class="tag">Celery</span><span class="tag">Aiogram</span>
-        <span class="tag">Docker Compose</span><span class="tag">Nginx</span>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">lesip.ru</span>
-        <a href="https://lesip.ru" target="_blank" class="project-link">lesip.ru ↗</a>
-      </div>
-      <p class="project-desc"
-         data-en="Website with Telegram API integration. Built with Python and Flask."
-         data-ru="Веб-сайт с интеграцией Telegram API. Написан на Python и Flask.">
-        Веб-сайт с интеграцией Telegram API. Написан на Python и Flask.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Flask</span>
-        <span class="tag">Telegram API</span>
-      </div>
-    </div>
-  </section>
-
-  <hr /> -->
-
-  <section>
+  <section id="education">
     <h2 data-en="Education" data-ru="Образование">Образование</h2>
     <div class="edu-name"
          data-en="Northern (Arctic) Federal University — NArFU"
@@ -371,6 +344,9 @@
       el.textContent = el.dataset[lang];
     });
     document.documentElement.lang = lang;
+    document.title = lang === 'en'
+      ? 'Eldar Korovin — DevOps Engineer'
+      : 'Коровин Эльдар — DevOps-инженер';
   }
 </script>
 </body>
